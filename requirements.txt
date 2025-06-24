@@ -1,0 +1,7 @@
+requests
+numpy
+pandas
+matplotlib
+wget
+openpyxl
+jinja2
