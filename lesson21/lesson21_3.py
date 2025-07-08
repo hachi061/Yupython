@@ -1,7 +1,12 @@
 from flask import Flask
+from markupsafe import escape
 
 app = Flask(__name__)
 
 @app.route("/")
-def hello_world():
-    return "<h1>你好, 全世界!</h1>"
+def index():
+    return "<h1>您好, 全世界!</h1>"
+
+@app.route("/user/<name>")
+def show_name(name):
+    return f"<h1>您好, {escape(name)}</h1>"
