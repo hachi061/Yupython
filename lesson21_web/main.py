@@ -9,7 +9,7 @@ app = Flask(__name__)
 client = genai.Client()
 
 line_bot_api = LineBotApi(os.environ['CHANNEL_ACCESS_TOKEN'])
-handler = WebhookHandler(os.environ['CHANNEL_SECRET'])
+handler = WebhookHandler(os.environ['0'])
 
 @app.route("/")
 @app.route("/<string:question>")
